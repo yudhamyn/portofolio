@@ -79,7 +79,7 @@ export default {
     },
     downloadResume() {
       const link = document.createElement('a');
-      link.href = '/resume/Resume Yudha Mulyana-Data-internship.pdf';
+      link.href = '/portofolio/resume/Resume Yudha Mulyana-Data-internship.pdf';
       link.setAttribute('download', 'Resume Yudha Mulyana-Data-internship.pdf');
       document.body.appendChild(link);
       link.click();
