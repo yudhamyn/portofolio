@@ -335,4 +335,23 @@ svg:hover{
 .tabs button.text-white.border-b-2.border-blue-300 {
   color: #00aaff;
 }
+@media (max-width: 640px) {
+  .tabs button.active-tab {
+    background: #24c9fb;
+    color: #1e1e1f;
+    font-weight: bold;
+  }
+
+  .tabs button {
+    color: #c1c1c1;
+    background: #1e1e1f;
+    border: 1px solid #383838;
+  }
+
+  .tabs button:hover {
+    color: #ffffff;
+    background: #282828;
+  }
+}
+
 </style>
