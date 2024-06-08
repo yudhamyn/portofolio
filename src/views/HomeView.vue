@@ -1,17 +1,17 @@
 <template>
   <main class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
     <div class="space-y-2 text-center md:text-left px-10">
-      <p class="text-blue-200">Hello World, I'm</p>
-      <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Yudha Mulyana</h1>
+      <p class="text-blue-200 text-sm md:text-base">Hello World, I'm</p>
+      <h1 class="text-3xl font-bold md:text-4xl text-white fadein-up">Yudha Mulyana</h1>
       <div class="py-2">
-        <h1 class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-blue-500 md:text-2xl fadein-up" ref="typewriter">
+        <h1 class="typewrite text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-blue-500 md:text-xl fadein-up" ref="typewriter">
           <span class="wrap">{{ txt }}</span>
         </h1>
       </div>
-      <p class="text-white pr-4 fade-in-from-left">Welcome to My personal website. <span class="wave">👋🏼</span></p>
+      <p class="text-white pr-4 fade-in-from-left text-sm md:text-base">Welcome to My personal website. <span class="wave">👋🏼</span></p>
       <br>
       <button
-        class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-blue-200 border-blue-200 hover:bg-blue-200 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit mb-16 md:mb-0"
+        class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-xs md:text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-blue-200 border-blue-200 hover:bg-blue-200 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit mb-16 md:mb-0"
         @click="downloadResume">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
           <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z" clip-rule="evenodd"></path>
@@ -21,7 +21,7 @@
       </button>
     </div>
     <div class="flex justify-center md:justify-start fadein-right">
-      <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
+      <img alt="avatar" fetchpriority="high" width="200" height="200" decoding="async" data-nimg="1" class="w-8/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
     </div>
   </main>
 </template>
@@ -88,6 +88,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 body {
@@ -230,10 +231,15 @@ body {
 .fade-500 {
   animation-delay: 500ms;
 }
+
+.mb-16 {
+  margin-bottom: 4rem; /* Increase the margin-bottom to create more space below the button */
+}
+
 @media screen and (max-width: 768px) {
   .fadein-bot {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Ensure the margin-bottom is also applied in mobile view */
   }
 }
 </style>
