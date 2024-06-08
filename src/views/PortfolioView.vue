@@ -10,15 +10,16 @@
         <div class="tabs flex justify-center gap-4 mb-8">
           <button 
             @click="activeTab = 1"
-            :class="{'text-white border-b-2 border-blue-300': activeTab === 1}">
+            :class="{'active-tab': activeTab === 1}">
             Projects
           </button>
           <button 
             @click="activeTab = 2"
-            :class="{'text-white border-b-2 border-blue-300': activeTab === 2}">
+            :class="{'active-tab': activeTab === 2}">
             Certificates
           </button>
         </div>
+
       </header>
       <section>
         <div v-if="activeTab === 1">
@@ -269,6 +270,36 @@ export default {
 </script>
 
 <style scoped>
+.tabs button {
+  padding: 0.5rem 1rem;
+  background: #1e1e1f;
+  border: 1px solid #383838;
+  border-radius: 0.375rem;
+  color: #c1c1c1;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tabs button:hover {
+  background: #282828;
+  color: #ffffff;
+}
+
+.tabs .active-tab {
+  background: #00f9ff;
+  color: #1e1e1f;
+  font-weight: bold;
+}
+
+.item-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .item-card:hover {
   transition: transform 0.3s ease;
   transform: translateY(-8px);
