@@ -230,20 +230,5 @@ body {
 .fade-500 {
   animation-delay: 500ms;
 }
-/* Added media query for mobile */
-@media (max-width: 767px) {
-  .fadein-bot {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .fadein-bot svg {
-    margin-right: 0.5rem; /* Adjust margin as needed */
-  }
-}
-
 
 </style>
