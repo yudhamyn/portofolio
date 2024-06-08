@@ -230,5 +230,11 @@ body {
 .fade-500 {
   animation-delay: 500ms;
 }
+@media screen and (max-width: 768px) {
+  .fadein-bot {
+    display: block;
+    margin-bottom: 16px;
+  }
+}
 
 </style>
