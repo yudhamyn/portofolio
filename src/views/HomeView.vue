@@ -21,7 +21,7 @@
       </button>
     </div>
     <div class="flex justify-center md:justify-start fadein-right">
-      <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
+      <img alt="avatar" fetchpriority="high" width="250" height="250" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
     </div>
   </main>
 </template>
