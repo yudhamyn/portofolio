@@ -21,7 +21,7 @@
       </button>
     </div>
     <div class="flex justify-center md:justify-start fadein-right">
-      <img alt="avatar" fetchpriority="high" width="150" height="150" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
+      <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-blue-200 pict" src="/portofolio/img/yudha.jpg">
     </div>
   </main>
 </template>
@@ -230,4 +230,16 @@ body {
 .fade-500 {
   animation-delay: 500ms;
 }
+/* Added media query for mobile */
+@media (max-width: 767px) {
+  .fadein-bot {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .fadein-bot svg {
+    margin-right: 0;
+  }
+}
+
 </style>
