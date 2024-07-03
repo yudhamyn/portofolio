@@ -4,7 +4,7 @@
       <div class="w-full">
         <div class="flex flex-col gap-4 md:px-20 fade-zoom-up">
           <article v-for="article in articles" :key="article.id" class="article-card">
-            <router-link :to="`/read/${article.slug}/${article.id}`" class="article-link">
+            <div @click="navigateToArticle(article)" class="article-link">
               <div class="w-full pr-4">
                 <div class="article-date">
                   <div class="date-line"></div>
@@ -18,13 +18,17 @@
               <div class="article-image-container">
                 <img :src="article.image" class="article-image" alt="Article Image">
               </div>
-            </router-link>
+            </div>
           </article>
         </div>
       </div>
     </div>
+    <div v-if="isLoading" class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -111,7 +115,7 @@ export default {
             'Led 48 team members, achieving a 50% funding increase and attracting 15 software hardware fair teams.',
             'Successfully got sponsorship IDR 14,820,000. Increased 120% compared to 2022 funding.',
             'Generated a 300% increase in visitor votes compared to the previous year (online).',
-            '●	Motivated and guided team members to achieve vision, mission, and activity goals, resulting in successful events and budget realization.'
+            'Motivated and guided team members to achieve vision, mission, and activity goals, resulting in successful events and budget realization.'
           ],
           image: 'https://avatars.githubusercontent.com/u/46035403?s=280&v=4'
         },
@@ -141,11 +145,27 @@ export default {
           ],
           image: 'https://via.placeholder.com/150'
         }
-      ]
+      ],
+      isLoading: false
+    };
+  },
+  watch: {
+    '$route'() {
+      this.isLoading = false;
+    }
+  },
+  methods: {
+    setLoading() {
+      this.isLoading = true;
+    },
+    navigateToArticle(article) {
+      this.setLoading();
+      this.$router.push(`/read/${article.slug}/${article.id}`);
     }
   }
 }
 </script>
+
 
 <style scoped>
 .container {
@@ -168,6 +188,7 @@ export default {
   width: 100%;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 .article-date {
   font-size: 0.75rem;
@@ -224,5 +245,29 @@ export default {
     opacity: 1;
     transform: scale(1);
   }
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.spinner {
+  border: 0.25rem solid #f3f3f3;
+  border-top: 0.25rem solid #3498db;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
