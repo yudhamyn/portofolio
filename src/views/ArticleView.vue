@@ -7,7 +7,7 @@
         <div class="h-[2px] w-20 my-5 md:my-10 bg-[#00f9ff] md:w-1/3 aos-init aos-animate mr-2"></div>
         <div>
           <div class="relative w-full" style="padding-top: 50%;">
-            <img :src="getImageUrl(article.image)" class="absolute top-0 left-0 rounded-lg w-full h-full object-cover" alt="Thumbnail">
+            <img :src="article.image" class="absolute top-0 left-0 rounded-lg w-full h-full object-cover" alt="Thumbnail">
           </div>
         </div>
         <div class="text-left text-black mt-8">
@@ -26,7 +26,6 @@ import { useRoute } from 'vue-router';
 export default {
   data() {
     return {
-      defaultImage: 'default-image.png', // Ganti dengan jalur gambar default Anda
       articles: [
         {
           id: 1,
@@ -38,7 +37,7 @@ export default {
             'Understand how to set up and run a NodeJS application.',
             'Explore the vast ecosystem of NodeJS modules and packages.'
           ],
-          image: 'comingsoon'
+          image: 'portfolio/img/comingsoon.png'
         },
         {
           id: 2,
@@ -124,22 +123,6 @@ export default {
       const route = useRoute();
       const articleId = parseInt(route.params.id);
       this.article = this.articles.find(article => article.id === articleId) || {};
-    },
-    getImageUrl(imageUrl) {
-      const supportedFormats = ['jpg', 'png', 'gif'];
-      for (let format of supportedFormats) {
-        let fullPath = `/portofolio/img/${imageUrl}.${format}`;
-        if (this.imageExists(fullPath)) {
-          return fullPath;
-        }
-      }
-      return this.defaultImage; // or a default image path if no image is found
-    },
-    imageExists(url) {
-      const http = new XMLHttpRequest();
-      http.open('HEAD', url, false);
-      http.send();
-      return http.status !== 404;
     }
   }
 };
