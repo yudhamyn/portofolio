@@ -37,7 +37,7 @@
               'Understand how to set up and run a NodeJS application.',
               'Explore the vast ecosystem of NodeJS modules and packages.'
             ],
-            image: 'comingsoon'
+            image: 'comingsoon.png'
           },
           {
             id: 2,
