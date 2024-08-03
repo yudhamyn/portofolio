@@ -12,22 +12,22 @@
           <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
             <li>
               <router-link to="/">
-                <span @click="setLoading" class="fadein-bot text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Home</span>
+                <span @click="setLoading" class="fadein-bot text-gray-500 hover:bg-gray-90 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-200 md:p-0">Home</span>
               </router-link>
             </li>
             <li>
               <router-link to="/about">
-                <span @click="setLoading" class="fadein-bot fadein-1 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">About</span>
+                <span @click="setLoading" class="fadein-bot fadein-1 text-gray-500 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-200 md:p-0">About</span>
               </router-link>
             </li>
             <li>
               <router-link to="/portfolio">
-                <span @click="setLoading" class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portfolio</span>
+                <span @click="setLoading" class="fadein-bot fadein-2 text-gray-500 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-200 md:p-0">Portfolio</span>
               </router-link>
             </li>
             <li>
               <router-link to="/blog">
-                <span @click="setLoading" class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0 blog">Experiences</span>
+                <span @click="setLoading" class="fadein-bot fadein-3 text-gray-500 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-200 md:p-0 blog">Experiences</span>
               </router-link>
             </li>
           </ul>
