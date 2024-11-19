@@ -24,56 +24,32 @@ export default {
         },
         {
           id: 4,
-          name: 'HTML',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/html-2752158-2284975.png',
-          status: 'Advance'
+          name: 'JavaScript',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png?f=webp&w=512',
+          status: 'Intermediate'
         },
         {
           id: 5,
-          name: 'PHP',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-php-2038871-1720084.png',
-          status: 'Advanced'
-        },
-        {
-          id: 6,
           name: 'django',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/django-1-282754.png',
           status: 'Intermediate'
         },
         {
-          id: 7,
+          id: 6,
           name: 'Laravel',
           imageUrl: 'https://cdn.worldvectorlogo.com/logos/laravel-2.svg',
           status: 'Intermediate'
         },
         {
-          id: 8,
+          id: 7,
           name: 'Codeigniter',
           imageUrl: 'https://cdn-peanutsquare.b-cdn.net/wp-content/uploads/2022/11/codeigniter-logo.png',
           status: 'Intermediate'
         },
         {
-          id: 9,
+          id: 8,
           name: 'Bootstrap',
           imageUrl: 'https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png',
-          status: 'Intermediate'
-        },
-        {
-          id: 10,
-          name: 'css',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png',
-          status: 'Intermediate'
-        },
-        {
-          id: 11,
-          name: 'tailwind',
-          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png',
-          status: 'Intermediate'
-        },
-        {
-          id: 10,
-          name: 'sass',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/sass-226054.png',
           status: 'Intermediate'
         },
 
