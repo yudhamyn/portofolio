@@ -43,7 +43,7 @@ export default {
         {
           id: 7,
           name: 'Codeigniter',
-          imageUrl: 'https://cdn-peanutsquare.b-cdn.net/wp-content/uploads/2022/11/codeigniter-logo.png',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/codeigniter-3-1175292.png',
           status: 'Intermediate'
         },
         {
